@@ -1,0 +1,62 @@
+{
+	"name": "king",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"engines": {
+		"node": "18.14.2"
+	},
+	"dependencies": {
+		"@ckeditor/ckeditor5-build-classic": "^40.0.0",
+		"@ckeditor/ckeditor5-react": "^6.1.0",
+		"@greatsumini/react-facebook-login": "^3.3.3",
+		"@react-oauth/google": "^0.11.1",
+		"@reduxjs/toolkit": "^1.9.5",
+		"@tailwindcss/line-clamp": "^0.4.4",
+		"@types/node": "20.5.9",
+		"@types/react": "18.2.21",
+		"@types/react-dom": "18.2.7",
+		"@types/uuid": "^9.0.5",
+		"autoprefixer": "10.4.15",
+		"axios": "^1.5.0",
+		"embla-carousel-react": "^8.0.0-rc12",
+		"encoding": "^0.1.13",
+		"eslint": "8.48.0",
+		"eslint-config-next": "13.4.19",
+		"firebase": "^10.4.0",
+		"framer-motion": "^10.16.4",
+		"js-cookie": "^3.0.5",
+		"lodash": "^4.17.21",
+		"moment": "^2.29.4",
+		"next": "^14.0.3-canary.6",
+		"next-share": "^0.27.0",
+		"notistack": "^3.0.1",
+		"postcss": "8.4.29",
+		"react": "^18.2.0",
+		"react-date-range": "^1.4.0",
+		"react-device-detect": "^2.2.3",
+		"react-dom": "^18.2.0",
+		"react-facebook-login": "^4.1.1",
+		"react-hook-form": "^7.46.1",
+		"react-icons": "^4.11.0",
+		"react-infinite-scroll-component": "^6.1.0",
+		"react-phone-input-2": "^2.15.1",
+		"react-redux": "^8.1.2",
+		"react-virtualized": "^9.22.5",
+		"redux-saga": "^1.2.3",
+		"tailwindcss": "3.3.3",
+		"typescript": "5.2.2",
+		"uuid": "^9.0.1"
+	},
+	"devDependencies": {
+		"@types/js-cookie": "^3.0.4",
+		"@types/lodash": "^4.14.198",
+		"@types/react-date-range": "^1.4.7",
+		"@types/react-virtualized": "^9.21.23"
+	}
+}

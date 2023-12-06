@@ -1,0 +1,49 @@
+.number-swiper{
+  display:flex;
+  /* flex-direction: column; */
+  font-size: 20px;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+  align-items: center;
+  
+}
+
+
+.number-swiper-active-number {
+  transition: all 0.4s ease-in-out; /* Adjust the duration as needed */
+  color: black !important;
+  font-weight: bold;
+
+}
+
+.number-swiper-column::-webkit-scrollbar { display:none }
+
+.number-swiper-column{
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 5px;
+  list-style: none;
+  padding: 0;
+  margin: auto 0;
+  scroll-snap-type: y proximity;
+  transition: all 10s ease-in-out;
+  scroll-behavior: smooth;
+
+}
+
+.number-swiper-column li{
+  scroll-snap-align: center;
+  height: 20px;
+  margin: .25em .03em .3em .1em;
+  color: #D8D8D8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+

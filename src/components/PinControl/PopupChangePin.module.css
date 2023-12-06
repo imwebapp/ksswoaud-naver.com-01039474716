@@ -1,0 +1,53 @@
+
+.PopupDigits_form {
+    /* background-color: rgb(70, 70, 70); */
+    height: fit-content;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    /* align-items: space-between; */
+    position: relative;
+    transition: 0.6s;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+
+}
+
+
+
+.PopupDigits_form_input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.PopupDigits_form_input input {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border-color: #ccc;
+    /* outline: none; */
+    /* color: black; */
+    background-color:white;
+    cursor: pointer;
+    text-align: center;
+    border :  1px solid #ccc;
+    /* caret-color : transparent; */
+}
+
+.PopupDigits_form_input input:focus{
+    border-color: #60A5FA;
+    outline: red;
+
+}
+.PopupDigits_form_input input.focus{
+    position: relative;
+}
+
