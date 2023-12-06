@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	const data = response.results.object
 
 	return {
-		metadataBase: new URL('https://newbkshop.com'),
+		metadataBase: new URL('https://kormsg.com'),
 		title: {
 			default: data.title as string,
 			template: `%s | ${data.title}`,

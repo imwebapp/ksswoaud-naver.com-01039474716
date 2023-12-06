@@ -7,7 +7,7 @@ import ShopApi from '@/src/services/Shop'
 
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-	const baseURL = 'https://newbkshop.com'
+	const baseURL = 'https://kormsg.com'
 
 	const boardsTransaction = await LinkApi.getList({
 		limit: 99,

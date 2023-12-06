@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
 			userAgent: "*",
 			allow: "/",
 		},
-		sitemap: 'https://newbkshop.com/sitemap.xml',
+		sitemap: 'https://kormsg.com/sitemap.xml',
 	}
 }
