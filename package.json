@@ -8,9 +8,6 @@
 		"start": "next start",
 		"lint": "next lint"
 	},
-	"engines": {
-		"node": "18.14.2"
-	},
 	"dependencies": {
 		"@ckeditor/ckeditor5-build-classic": "^40.0.0",
 		"@ckeditor/ckeditor5-react": "^6.1.0",
