@@ -14,9 +14,15 @@ import ListMentor from '@/src/components/ListMentor'
 import ShopApi from '@/src/services/Shop'
 import { MetadataProps } from '@/src/interfaces'
 import { Metadata, ResolvingMetadata } from 'next'
+import SettingApi from '@/src/services/Setting'
 
 async function getShopDetail(id: string, token?: string) {
 	const res = await ShopApi.getDetail(id, token)
+	return res
+}
+
+async function getAdminSetting() {
+	const res = await SettingApi.SettingAdmin()
 	return res
 }
 export async function generateMetadata(
@@ -49,7 +55,8 @@ export default async function ShopDetailPage({
 	const result = (await getShopDetail(params.id, token)).results.object.shop
 
 	const detail = result.old_shop ?? result
-
+	const adminSetting = await getAdminSetting()
+	
 	return (
 		<div className='pb-20 relative'>
 			<BackButton
@@ -116,7 +123,7 @@ export default async function ShopDetailPage({
 				className='flex flex-col items-center p-4'
 				dangerouslySetInnerHTML={{ __html: detail.description }}
 			/>
-			{detail.mentors?.length ? (
+			{!!adminSetting?.object?.mentor_status && detail.mentors?.length ? (
 				<div className='flex flex-col gap-4 py-2 px-4'>
 					<p className='text-lg font-bold'>
 						담당자
