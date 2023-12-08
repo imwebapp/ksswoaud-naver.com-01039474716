@@ -112,6 +112,7 @@ export interface CreateShopFilterProps {
 	tags?: string[]
 	province?: string
 	district?: string
+	location?: string
 	line?: string
 	station?: string
 }
@@ -122,6 +123,7 @@ export const createShopFilter = ({
 	tags,
 	province,
 	district,
+	location,
 	line,
 	station,
 }: CreateShopFilterProps): any => {
@@ -164,6 +166,7 @@ export const createShopFilter = ({
 				shop_province: province,
 			},
 			{ shop_district: district },
+			{ subway_location: location },
 			{ subway_line: line },
 			{ subway_station: station },
 		].filter(Boolean),

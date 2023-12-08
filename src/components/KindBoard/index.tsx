@@ -49,10 +49,14 @@ export default function KindBoard({
 		router.push(mergeQueryParams(pathname, queryParams))
 	}
 
-	const handleChangeStation = (line: string, station: string) => {
+	const handleChangeStation = (
+		location: string,
+		line: string,
+		station: string,
+	) => {
 		// chỉ chọn 1 thì sử dụng _params , còn nếu chọn nhiều hơn 1 thì dùng params
 		const _params = new URLSearchParams()
-		const queryParams = createQueryParams({ line, station }, _params)
+		const queryParams = createQueryParams({ location, line, station }, _params)
 		router.push(mergeQueryParams(pathname, queryParams))
 	}
 

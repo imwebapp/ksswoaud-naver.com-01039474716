@@ -40,9 +40,14 @@ export default function ConfigStep() {
 		)
 	}
 
-	const handleChangeStation = (line: string, station: string) => {
+	const handleChangeStation = (
+		location: string,
+		line: string,
+		station: string,
+	) => {
 		dispatch(
 			updateInformationShop({
+				subway_location: location,
 				subway_line: line,
 				subway_station: station,
 			}),
@@ -176,7 +181,7 @@ export default function ConfigStep() {
 				onClick={() => setLocationDialog(true)}
 			/>
 			<StoreInputField
-				value={`${shop.subway_line ?? ''} ${shop.subway_station ?? ''}`}
+				value={`${shop.subway_location ?? ''} ${shop.subway_line ?? ''} ${shop.subway_station ?? ''}`}
 				label='지하철'
 				expand
 				placeholder='지하철을 선택해주세요'

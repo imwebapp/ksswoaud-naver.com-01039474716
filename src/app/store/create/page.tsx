@@ -95,6 +95,7 @@ export default function Page() {
 				shop_province: shop.shop_province,
 				shop_district: shop.shop_district,
 				subway_station: shop.subway_station,
+				subway_location: shop.subway_location,
 				subway_line: shop.subway_line,
 				old_shop: shop.old_shop,
 			}
@@ -237,6 +238,7 @@ export default function Page() {
 					'opening_hours',
 					'category_id',
 					'tag_ids',
+					'subway_location',
 					'subway_line',
 					'subway_station',
 					'shop_district',
@@ -265,6 +267,7 @@ export default function Page() {
 			'tag_ids',
 			'category_id',
 			'category',
+			'subway_location',
 			'subway_line',
 			'subway_station',
 			'shop_province',

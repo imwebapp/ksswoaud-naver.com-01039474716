@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import Dialog from '../Dialog'
@@ -37,6 +37,32 @@ export default function LocationDialog({
 		onClose()
 	}
 
+	const [listData, setListData] = useState<any>([])
+
+	const convertData = () => {
+		let newData = []
+		const length = Math.ceil(LOCATION_LIST.length / 3)
+
+		for (let index = 0; index < length; index++) {
+			let data: any = []
+			if (index * 3 < LOCATION_LIST.length) {
+				data.push(LOCATION_LIST[index * 3])
+			}
+			if (index * 3 + 1 < LOCATION_LIST.length) {
+				data.push(LOCATION_LIST[index * 3 + 1])
+			}
+			if (index * 3 + 2 < LOCATION_LIST.length) {
+				data.push(LOCATION_LIST[index * 3 + 2])
+			}
+			newData.push(data)
+		}
+		setListData(newData)
+	}
+
+	useEffect(() => {
+		convertData()
+	}, [])
+
 	return (
 		<Dialog open={open} onClose={onClose} fullScreen maxWidth='md'>
 			<div className='py-2.5 px-4'>
@@ -45,15 +71,21 @@ export default function LocationDialog({
 					<span className='font-bold'>지역</span>
 				</button>
 				<div className='mt-6'>
-					<div className='flex border border-black rounded-[10px]'>
-						{LOCATION_LIST.map((item, i) => (
-							<Tab
-								key={i}
-								active={province === item.name}
-								onClick={() => handleChangeProvince(item.name)}
-							>
-								{item.name}
-							</Tab>
+					<div>
+						{listData.map((item: any, index: any) => (
+							<>
+								<div className='border border-black rounded-[10px] grid grid-cols-3 mt-2'>
+									{item.map((itemChild: any, i: any) => (
+										<Tab
+											key={i}
+											active={province === itemChild.name}
+											onClick={() => handleChangeProvince(itemChild.name)}
+										>
+											{itemChild.name}
+										</Tab>
+									))}
+								</div>
+							</>
 						))}
 					</div>
 					<div className='flex gap-6 flex-col mt-4'>
