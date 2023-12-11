@@ -60,9 +60,9 @@ export default function ListPost(props: ListPostProps) {
 					is_dislike={post.is_dislike}
 					is_report={post.is_report}
 					createdAt={post.created_at}
-					nickname={post.user.nickname}
+					nickname={post.user?.nickname}
 					content={post.content}
-					avatarUser={post.user.avatar}
+					avatarUser={post.user?.avatar}
 					user_id={post.user_id}
 					video={post.videos && post.videos[0]}
 					onClickAction={(e) => {
