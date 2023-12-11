@@ -25,7 +25,7 @@ export default function Header({ links, children, hiddenLink }: HeaderProps) {
 
 	return (
 		<header
-			className='flex items-center flex-col px-2.5 py-1.5 m-[0_auto]
+			className='max-h-[108px] flex items-center flex-col px-2.5 py-1.5 m-[0_auto]
       fixed top-0 left-0 right-0 w-full bg-white z-50 max-w-[502px]'
 		>
 			<div className='flex gap-3 w-full'>

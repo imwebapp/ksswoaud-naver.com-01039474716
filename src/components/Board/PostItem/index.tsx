@@ -134,13 +134,20 @@ export default function PostItem({
 				<div className='flex items-center justify-between'>
 					<div className='flex gap-2'>
 						<div className='min-w-[52px]'>
-							<Image
-								src={avatarUser ?? '/images/logo.jpg'}
-								alt=''
-								width={52}
-								height={52}
-								className='aspect-square object-cover rounded-full'
-							/>
+							{avatarUser ? (
+								<Image
+									src={avatarUser}
+									alt=''
+									width={52}
+									height={52}
+									className='aspect-square object-cover rounded-full'
+								/>
+							) : (
+								<div className='flex border w-[52px] min-w-[52px] h-[52px] rounded-full flex-col items-center justify-center gap-2'>
+									<Image src='/icons/cycle.svg' width={12} height={12} alt='' />
+									<Image src='/icons/eclip.svg' width={21} height={12} alt='' />
+								</div>
+							)}
 						</div>
 						<div className='flex flex-col justify-center'>
 							<p className='line-clamp-2 font-medium mb-2'>{title}</p>
@@ -170,7 +177,9 @@ export default function PostItem({
 
 	const ContentWidget = () => {
 		return (
-			<span className='mt-2 text-[15px] text-[#222222] line-clamp-2'>{content}</span>
+			<span className='mt-2 text-[15px] text-[#222222] line-clamp-2'>
+				{content}
+			</span>
 		)
 	}
 

@@ -19,6 +19,7 @@ export interface PostI {
 	category_id: string
 	title: string
 	user: any
+	user_name: string
 	is_like: boolean
 	is_dislike: boolean
 	category: CategoryI
