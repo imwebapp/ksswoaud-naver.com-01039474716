@@ -99,7 +99,7 @@ export default async function ShopDetailPage({
             flex flex-row justify-between rounded-md relative overflow-hidden'
 					>
 						<div className='flex gap-3 items-center  py-7 px-5'>
-							<Image src='/images/discount.png' alt='' width={44} height={44} />
+							<Image src='/icons/ic-discount.svg' alt='' width={44} height={44} />
 							<div className='text-sm'>
 								<p className='text-[#466AFF]'>{detail.events[0].title}</p>
 								<p className='font-medium'>{detail.events[0].description}</p>
