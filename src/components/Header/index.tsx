@@ -33,13 +33,13 @@ export default function Header({ links, children, hiddenLink }: HeaderProps) {
 					<MenuSetting />
 					<Motion>
 						<Link href='/' className='flex'>
-							<Image
+							{/* <Image
 								src='/images/logo.jpg'
 								alt='Logo'
 								width={24}
 								height={24}
 								className='object-cover max-h-[24px]'
-							/>
+							/> */}
 						</Link>
 					</Motion>
 				</div>

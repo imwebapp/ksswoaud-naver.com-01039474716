@@ -31,7 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
 		generator: 'Next.js',
 		referrer: 'origin-when-cross-origin',
 		icons: {
-			icon: data.icon,
+			// icon: data.icon,
+			icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
 		},
 		formatDetection: {
 			email: false,
